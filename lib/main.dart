@@ -1,12 +1,12 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tpg_assignment/firebase_options.dart';
-import 'package:tpg_assignment/views/screens/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+import 'firebase_options.dart';
+import 'views/screens/login_screen.dart';
 import 'viewmodels/consultation_viewmodel.dart';
 import 'viewmodels/profile_viewmodel.dart';
 import 'routes/route_manager.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 // Group Members //
 // K Kekane, 220043566
@@ -16,29 +16,25 @@ import 'package:firebase_core/firebase_core.dart';
 // K Taaibosch, 222001440
 // TP Montsho, 222034315
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-      options: FirebaseOptions(
-        apiKey: "AIzaSyAuNeua1ROPQGLo4-jRPDxLFytAz3oidM4",
-        appId: "1:672341438364:web:5c479dec65a5d74f6b2259",
-        messagingSenderId: "672341438364",
-        projectId: "student-portal-b19f0",
-      ),
-    );
-  } else {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  }
+
+  // Secure Firebase initialization for all platforms (Web, Android, iOS, Desktop)
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ConsultationViewModel()),
-        ChangeNotifierProvider(create: (_) => ProfileViewModel()),
+        ChangeNotifierProvider(
+          create: (_) => ConsultationViewModel(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ProfileViewModel(),
+        ),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -60,3 +56,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+

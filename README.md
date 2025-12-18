@@ -8,7 +8,7 @@ This project demonstrates **modern Flutter development**, **secure Firebase inte
 
 ## 📌 Project Overview
 
-The Student Consultation Management App enables students to securely authenticate, manage their profiles, and book consultations through a clean and intuitive interface.  
+The Consultation Booking App enables students to securely authenticate, manage their profiles, and book consultations through a clean and intuitive interface.  
 The application integrates Firebase for authentication and data storage while following **industry-standard security practices** to protect sensitive configuration.
 
 ---
@@ -37,19 +37,6 @@ The application integrates Firebase for authentication and data storage while fo
 
 ---
 
-## 🧱 Project Structure
-lib/
-├── routes/ # Centralized routing
-├── viewmodels/ # Business logic (Provider)
-├── views/
-│ └── screens/ # UI screens
-├── firebase_options.dart # Local Firebase config (ignored)
-├── firebase_options_example.dart # Public example config
-└── main.dart # Application entry point
-
-
----
-
 ## 🔐 Firebase Configuration (Secure Setup)
 
 This repository **does not include real Firebase credentials**.  
@@ -70,8 +57,8 @@ Sensitive configuration is excluded using `.gitignore`.
 4. **Configure Firebase for Flutter**
    flutterfire configure
 5. **Create local Firebase config**
-      ```bash
-cp lib/firebase_options_example.dart lib/firebase_options.dart
+   ```bash
+   cp lib/firebase_options_example.dart lib/firebase_options.dart
 6. **Run the application**
   ```bash
      flutter run

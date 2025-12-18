@@ -48,13 +48,14 @@ Sensitive configuration is excluded using `.gitignore`.
    ```bash
    git clone https://github.com/Hadebe-Sizwe1806/Consultation_Booking_App.git
    cd Consultation_Booking_App
-2. ** Install dependencies **
+2. **Install dependencies**
       ```bash
     flutter pub get
 3. **Create a Firebase project**<br>
    Go to the Firebase Console<br>
    Enable Authentication and Cloud Firestore
 4. **Configure Firebase for Flutter**
+    ```bash
    flutterfire configure
 5. **Create local Firebase config**
    ```bash

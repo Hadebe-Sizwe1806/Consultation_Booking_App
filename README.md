@@ -52,8 +52,8 @@ Sensitive configuration is excluded using `.gitignore`.
       ```bash
     flutter pub get
 3. **Create a Firebase project**<br>
-   Go to the Firebase Console<br>
-   Enable Authentication and Cloud Firestore
+   * Go to the Firebase Console<br>
+   * Enable Authentication and Cloud Firestore
 4. **Configure Firebase for Flutter**
     ```bash
    flutterfire configure
@@ -61,8 +61,8 @@ Sensitive configuration is excluded using `.gitignore`.
    ```bash
    cp lib/firebase_options_example.dart lib/firebase_options.dart
 6. **Run the application**
-  ```bash
-     flutter run
+   ```bash
+   flutter run
 
 
 

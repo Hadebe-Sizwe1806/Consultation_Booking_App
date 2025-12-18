@@ -1,4 +1,4 @@
-# 🚀 Student Consultation Management App  
+# 🚀 Consultation Booking App  
 ### Flutter • Firebase • Provider
 
 A **cross-platform Flutter application** developed to manage student consultations and profiles.  

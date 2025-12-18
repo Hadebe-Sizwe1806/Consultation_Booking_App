@@ -51,8 +51,8 @@ Sensitive configuration is excluded using `.gitignore`.
 2. ** Install dependencies **
       ```bash
     flutter pub get
-3. **Create a Firebase project**
-   Go to the Firebase Console
+3. **Create a Firebase project**<br>
+   Go to the Firebase Console<br>
    Enable Authentication and Cloud Firestore
 4. **Configure Firebase for Flutter**
    flutterfire configure
